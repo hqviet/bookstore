@@ -1,20 +1,5 @@
 $('.addBtn').click(function() {
-  $.ajax({
-    url: 'controllers/addCart.php',
-    type: 'GET',
-    data: {
-      itemId: $(this).attr('data-id'),
-      itemTitle: $(this).attr('data-title'),
-      itemPrice: $(this).attr('data-price'),
-      itemQuantity: $(this).attr('data-quantity')
-    },
-    success: function(data) {
-      alert(data);
-    },
-    error: function() {
-      alert('Fail to add !');
-    }
-  });
+
     $.ajax({
         url: './controllers/addCart.php',
         type: 'GET',
@@ -25,7 +10,8 @@ $('.addBtn').click(function() {
             itemQuantity: $(this).attr('data-quantity')
         },
         success: function(data) {
-            if (data.includes(".php")) {
+            var ext = ".php";
+            if (data.indexOf(ext) >= 0) {
                 window.location = data;
             }
             else {

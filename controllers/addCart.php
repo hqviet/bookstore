@@ -7,7 +7,6 @@ if (isset($_SESSION['sessionUsername'])) {
     if (isset($_SESSION['shoppingCart'])) {
 
         $idExisted = false;
-        // check if book exists ?
         foreach($_SESSION['shoppingCart'] as $item ) {
             if ($item['itemId'] == $_GET['itemId']) {
                 $idExisted = true;
