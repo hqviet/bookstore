@@ -1,5 +1,4 @@
 $('.addBtn').click(function() {
-<<<<<<< cda2b9472bc688bd6e4a02c7ebb0cfafd76f5d52
   $.ajax({
     url: 'controllers/addCart.php',
     type: 'GET',
@@ -16,7 +15,6 @@ $('.addBtn').click(function() {
       alert('Fail to add !');
     }
   });
-=======
     $.ajax({
         url: './controllers/addCart.php',
         type: 'GET',
@@ -38,6 +36,5 @@ $('.addBtn').click(function() {
             alert('Fail to add !');
         }
     });
->>>>>>> add more functions
 });
 
