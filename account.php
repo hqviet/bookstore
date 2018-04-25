@@ -14,7 +14,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <form>
+                    <form method="POST" action="./controllers/loginValidate.php">
                         <div class="form-group">
                             <h4 class="text-center border-top" style="line-height: 0.1px; margin:10px 0 20px;"><span class="bg-white pl-2 pr-2 text-secondary">Log in</span></h4>
                         </div>
@@ -61,42 +61,42 @@
    ?>
 
    <script>
-    $('input[name="login"]').click(function() {
-        $.ajax({
-            url: './controllers/loginValidate.php',
-            type: 'POST',
-            data: {
-                email: $('input[name="email"]').val(),
-                password: $('input[name="password"]').val()
-            },
-            success: function(data) {
-                if (parseInt(data) == 1) {
-                    window.location = "./index.php";
-                }
-                else {
-                    location.reload();
-                }
-            },
-            error: function() {
-                alert("something went wrong! please try again later!");
-            }
-        });
-    });
-    $('input[name="signup"]').click(function() {
-        $.ajax({
-            url: './controllers/signupValidate.php',
-            type: 'POST',
-            data: {
-                signupEmail: $('input[name="signupEmail"]').val(),
-                signupPassword: $('input[name="password"]').val(),
-            },
-            success: function(data) {
-                alert(data);
-                window.location = "./index.php";
-            },
-            error: function() {
-                alert("something went wrong! please try again later!");
-            }
-        });
-    });
+    // $('input[name="login"]').click(function() {
+    //     $.ajax({
+    //         url: './controllers/loginValidate.php',
+    //         type: 'POST',
+    //         data: {
+    //             email: $('input[name="email"]').val(),
+    //             password: $('input[name="password"]').val()
+    //         },
+    //         success: function(data) {
+    //             if (parseInt(data) == 1) {
+    //                 window.location = "./index.php";
+    //             }
+    //             else {
+    //                 location.reload();
+    //             }
+    //         },
+    //         error: function() {
+    //             alert("something went wrong! please try again later!");
+    //         }
+    //     });
+    // });
+    // $('input[name="signup"]').click(function() {
+    //     $.ajax({
+    //         url: './controllers/signupValidate.php',
+    //         type: 'POST',
+    //         data: {
+    //             signupEmail: $('input[name="signupEmail"]').val(),
+    //             signupPassword: $('input[name="password"]').val(),
+    //         },
+    //         success: function(data) {
+    //             alert(data);
+    //             window.location = "./index.php";
+    //         },
+    //         error: function() {
+    //             alert("something went wrong! please try again later!");
+    //         }
+    //     });
+    // });
 </script>

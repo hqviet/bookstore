@@ -2,7 +2,7 @@ $('.addBtn').click(function() {
 
     $.ajax({
         url: './controllers/addCart.php',
-        type: 'GET',
+        type: 'POST',
         data: {
             itemId: $(this).attr('data-id'),
             itemTitle: $(this).attr('data-title'),

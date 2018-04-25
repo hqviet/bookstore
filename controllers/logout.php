@@ -6,9 +6,11 @@
  * Time: 11:00 PM
  */
 session_start();
-if ($_POST['clear'] == "y") {
+if ($_GET['clear'] == "y") {
     unset($_SESSION['sessionUsername']);
     session_destroy();
 }
-header("location: ../index.php");
 ?>
+<script>
+    window.location = "../index.php";
+</script>
