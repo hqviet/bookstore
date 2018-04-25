@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <link rel="stylesheet" type="text/css" href="./public/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="./public/icon/web-fonts-with-css/css/fa-brands.css">
 <link rel="stylesheet" type="text/css" href="./public/icon/web-fonts-with-css/css/fa-regular.css">
@@ -11,7 +12,7 @@
 <script type="text/javascript" src="./public/js/bootstrap.js"></script>
 <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 -->
-<?php session_start(); ?>
+
 <style type="text/css">
 
     .nav-item {
@@ -107,7 +108,7 @@
 
         </div>
 
-        <form class="form-inline my-2 my-lg-0" action="search.php" method="GET">
+        <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
             <input class="form-control" name="querry" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i>
             </button>

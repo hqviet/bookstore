@@ -66,8 +66,8 @@ include 'header.php';
 
     $('input[name="deleteBtn"]').click(function() {
         $.ajax({
-            url: 'controllers/deleteSingleItem.php',
-            type: 'GET',
+            url: './controllers/deleteSingleItem.php',
+            type: 'POST',
             data: {
                 deleteItemId: $(this).attr('data-link')
             },
@@ -82,8 +82,8 @@ include 'header.php';
 
     $('#deleteAllBtn').click(function() {
         $.ajax({
-            url: 'controllers/deleteAll.php',
-            type: 'GET',
+            url: './controllers/deleteAll.php',
+            type: 'POST',
             data: {
                 deleteAll: 'true'
             },

@@ -6,7 +6,7 @@
  * Time: 11:00 PM
  */
 session_start();
-if ($_GET['clear'] == "y") {
+if ($_POST['clear'] == "y") {
     unset($_SESSION['sessionUsername']);
     session_destroy();
 }

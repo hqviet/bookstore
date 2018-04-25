@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: quocviet
@@ -6,22 +7,19 @@
  * Time: 1:52 PM
  */
 include "./dbConfig.php";
-include "../models/SessionUser.php";
-session_start();
 
-$loginStmt = $db->prepare("select * from users where email = :email and password = :password");
-$loginStmt->execute(array(':email' => $_GET['email'], 'password' => $_GET['password']));
-$loginRs = $loginStmt->fetchAll();
-if (count($loginRs) == 1) {
-    $_SESSION['sessionUsername'] = $loginRs[0]['username'];
-    $_SESSION['sessionEmail'] = $loginRs[0]['sessionEmail'];
-    $_SESSION['sessionAddress'] = $loginRs[0]['sessionAddress'];
-    $_SESSION['sessionPhone'] = $loginRs[0]['sessionPhone'];
-    echo 1;
+if ($_POST['login']) {
+	$loginStmt = $db->prepare("select * from users where email = :email and password = :password");
+	$loginStmt->execute(array(':email' => $_POST['email'], 'password' => $_POST['password']));
+	$loginRs = $loginStmt->fetchAll();
+	foreach ($loginRs as $row) {
+		$_SESSION['sessionUsername'] = $row['username'];
+		$_SESSION['sessionEmail'] = $row['email'];
+		$_SESSION['sessionAddress'] = $row['address'];
+		$_SESSION['sessionPhone'] = $row['phone'];
+	}
 }
-else {
-    echo 0;
-}
-
 ?>
-
+<script type="text/javascript">
+	window.location = "../index.php";
+</script>

@@ -1,6 +1,6 @@
 <?php  
 session_start();
-if ($_GET['deleteAll']) {
+if ($_POST['deleteAll']) {
   unset($_SESSION['shoppingCart']);
 }
 else {

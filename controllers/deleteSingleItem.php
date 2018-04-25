@@ -2,7 +2,7 @@
 session_start();
 if (count($_SESSION['shoppingCart']) >= 1) {
 	for ($i=0; $i < count($_SESSION['shoppingCart']); $i++) { 
-		if ($_GET['deleteItemId'] == $_SESSION['shoppingCart'][$i]['itemId']) {
+		if ($_POST['deleteItemId'] == $_SESSION['shoppingCart'][$i]['itemId']) {
 			unset($_SESSION['shoppingCart'][$i]);
 			$_SESSION['shoppingCart'] = array_values($_SESSION['shoppingCart']);
 			if (count($_SESSION['shoppingCart']) == 0) {
