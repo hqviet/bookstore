@@ -1,23 +1,15 @@
 
 <head>
     <title>Shop</title>
-    <style type="text/css">
-    .card-shadow:hover {
-        box-shadow: 0px 1px 10px grey;
-        transition: all .3s;
-    }
-    .card-shadow {
-        transition: all .2s;
-    }
-</style>
 </head>
 
 <?php 
 include './header.php';
 include './banner.php'; 
-include 'models/Book.php';
-include 'models/Item.php';
+include './models/Book.php';
+include './models/Item.php';
 require_once './controllers/dbConfig.php';
+
 ?>
 
 
@@ -52,7 +44,7 @@ require_once './controllers/dbConfig.php';
                     <p class="card-text font-weight-bold">$ <?= $book['price'] ?></p>
                     <p class="card-text"></p>
                     <button type="button" class="btn btn-outline-success addBtn" data-id="<?= $book['id'] ?>" data-title="<?= $book['title'] ?>" data-price="<?= $book['price'] ?>" data-quantity="<?= $book['quantity'] ?>"
-                        ><i class="fas fa-cart-plus"></i></button>
+                    ><i class="fas fa-cart-plus"></i></button>
                         <button class="btn btn-outline-danger" data-id="<?= $book['id'] ?>"><i class="fas fa-heart"></i></button>
                         <!-- Modal trigger -->
                         <button class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal<?= $book['id'] ?>"><i class="fas fa-align-justify"></i></button>

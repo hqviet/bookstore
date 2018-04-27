@@ -17,7 +17,8 @@ if (isset($_SESSION['sessionUsername'])) {
             $itemArray = array(
                 'itemId' => $_POST['itemId'],
                 'itemTitle' => $_POST['itemTitle'],
-                'itemPrice' => $_POST['itemPrice']
+                'itemPrice' => $_POST['itemPrice'],
+                'itemQuantity' => 1
             );
             $_SESSION['shoppingCart'][count($_SESSION['shoppingCart'])] = $itemArray;
             array_values($_SESSION['shoppingCart']);
@@ -36,7 +37,8 @@ if (isset($_SESSION['sessionUsername'])) {
             $itemArray = array(
                 'itemId' => $_POST['itemId'],
                 'itemTitle' => $_POST['itemTitle'],
-                'itemPrice' => $_POST['itemPrice']
+                'itemPrice' => $_POST['itemPrice'],
+                'itemQuantity' => 1
             );
             $_SESSION['shoppingCart'][0] = $itemArray;
             array_values($_SESSION['shoppingCart']);

@@ -34,7 +34,7 @@
 
 </style>
 
-<?php require_once 'controllers/dbConfig.php'; ?>
+<?php require_once './controllers/dbConfig.php'; ?>
 <nav class="navbar navbar-expand-lg navbar-light my_header" style="background-color: #F2F1EF; box-shadow: 0px 1px 10px grey;  ">
     <a class="navbar-brand d-md-none d-sm-block" href="#">Bookstore</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

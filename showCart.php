@@ -26,7 +26,7 @@ include 'header.php';
                         <td><?= $row['itemTitle'] ?></td>
                         <td>
                             <input class="form-control w-50 not_null ml-auto mr-auto" type="number" min="1"
-                                   name="quantityOrder" data-link="<?= $row['itemId'] ?>" value="" required>
+                                   name="quantityOrder" data-link="<?= $row['itemId'] ?>" value="<?= $row['itemQuantity'] ?>" required>
                             <input type="hidden" data-link="<?= $row['itemId'] ?>" name="itemPrice"
                                    value="<?= $row['itemPrice'] ?>">
                         </td>
@@ -44,7 +44,7 @@ include 'header.php';
             </table>
             <div class="text-center">
                 <input class="btn btn-danger" type="button" value="Delete All" id="deleteAllBtn">
-                <a href="" class="btn btn-info checkout">Check out</a>
+                <a href="./checkout.php" class="btn btn-info checkout">Check out</a>
             </div>
             <?php
         }
@@ -93,6 +93,24 @@ include 'header.php';
             },
             error: function(data) {
                 alert(data);
+            }
+        });
+    });
+
+
+    $('input[name="quantityOrder"').change(function() {
+        $.ajax({
+            url:'./controllers/updateCart.php',
+            type: 'POST',
+            data: {
+                changeId: $(this).attr('data-link'),
+                changeQuantity: $(this).val()
+            },
+            success: function(data) {
+                console.log(data);
+            },
+            error: function() {
+                alert("Something went wrong! Please try again later!");
             }
         });
     });

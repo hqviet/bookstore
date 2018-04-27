@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html>
 <head>
-
 	<title>Shop</title>
-	<style type="text/css">
-	.card-shadow:hover {
-		box-shadow: 0px 1px 10px grey;
-		transition: all .3s;
-	}
-	.card-shadow {
-		transition: all .2s;
-	}
-</style>
 </head>
-<body>
 
 	<?php include 'header.php'; ?>
 
@@ -117,9 +104,7 @@
 
 	 </div>
 
- </body>
  <script type="text/javascript" src="public/js/popper.js"></script>
  <script type="text/javascript" src="public/js/bootstrap.js"></script>
  <script type="text/javascript" src="public/js/script.js"></script>
- </html>
 

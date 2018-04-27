@@ -19,11 +19,11 @@
 
   <div class="container-fluid mt-5 mb-3">    
 
-    <h2 class="text-center">Books in <span class="font-italic text-danger"><?= $_POST['cat'] ?></span></h2>
+    <h2 class="text-center">Books in <span class="font-italic text-danger"><?= $_GET['cat'] ?></span></h2>
     <div class="d-flex flex-wrap mt-5">
       <?php  
-      include 'models/Book.php';
-      $genre = $_POST['cat'];
+      include './models/Book.php';
+      $genre = $_GET['cat'];
       $rsCatOpt = $db->query("SELECT * FROM books WHERE genre = '" . $genre . "'");
       // var_dump($rsCatOpt);
       if (is_array($rsCatOpt) || is_object($rsCatOpt)) {
