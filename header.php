@@ -15,22 +15,22 @@
 
 <style type="text/css">
 
-    .nav-item {
-        border-bottom: 1px solid transparent;
-        transition: all .3s;
-    }
-    .nav-item:hover {
-        border-bottom: 1px solid green;
-        transition: all .3s;
-    }
-    .nav-link:hover {
-        color: green !important;
-        transition: all .3s;
-    }
-    .nav-link {
-        transition: all .3s;
-        color: #1e221f !important;
-    }
+.nav-item {
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+}
+.nav-item:hover {
+    border-bottom: 1px solid green;
+    transition: all .3s;
+}
+.nav-link:hover {
+    color: green !important;
+    transition: all .3s;
+}
+.nav-link {
+    transition: all .3s;
+    color: #1e221f !important;
+}
 
 </style>
 

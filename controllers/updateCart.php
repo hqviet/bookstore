@@ -11,7 +11,6 @@ if ($_POST['changeId'] && $_POST['changeQuantity']) {
         if ($item['itemId'] === $_POST['changeId']) {
             $item['itemQuantity'] = $_POST['changeQuantity'];
             unset($item);
-            var_dump($_SESSION['shoppingCart']);
             break;
         }
     }
