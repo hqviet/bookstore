@@ -55,7 +55,7 @@
     }
     else {
        ?>
-       <script type="text/javascript"> window.location = "./index.php"; </script>
+       <script type="text/javascript"> window.location = "./"; </script>
        <?php
    }
    ?>

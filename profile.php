@@ -18,19 +18,19 @@ include "./header.php";
         <div class="col mt-2 mb-2">
             <div class="form-group">
                 <label for="">Email</label>
-                <input type="text" class="form-control" name="profileEmail" readonly value="<?= $_SESSION['sessionEmail'] ?>">
+                <input type="text" class="form-control" name="profileEmail" readonly value="<?= $_SESSION['session_email'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Username</label>
-                <input type="text" class="form-control" name="profileUsername" value="<?= $_SESSION['sessionUsername'] ?>">
+                <input type="text" class="form-control" name="profileUsername" value="<?= $_SESSION['session_username'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Phone number</label>
-                <input type="text" class="form-control" name="profilePhone" value="<?= $_SESSION['sessionPhone'] ?>">
+                <input type="text" class="form-control" name="profilePhone" value="<?= $_SESSION['session_phone'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Address</label>
-                <input type="text" class="form-control" name="profileAddress" value="<?= $_SESSION['sessionAddress'] ?>">
+                <input type="text" class="form-control" name="profileAddress" value="<?= $_SESSION['session_address'] ?>">
             </div>
             <br>
             <div class="form-group">

@@ -8,7 +8,7 @@ include 'header.php';
     <br>
     <div class="w-75 ml-auto mr-auto">
         <?php
-        if (isset($_SESSION['shoppingCart'])) {
+        if (isset($_SESSION['shopping_cart'])) {
             ?>
             <table class="table">
                 <thead>
@@ -20,7 +20,7 @@ include 'header.php';
                 </thead>
 
                 <?php
-                foreach ($_SESSION['shoppingCart'] as $row) {
+                foreach ($_SESSION['shopping_cart'] as $row) {
                     ?>
                     <tr>
                         <td><?= $row['itemTitle'] ?></td>

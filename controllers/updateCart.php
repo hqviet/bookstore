@@ -7,8 +7,8 @@
  */
 session_start();
 if ($_POST['changeId'] && $_POST['changeQuantity']) {
-    foreach ($_SESSION['shoppingCart'] as &$item) {
-        if ($item['itemId'] === $_POST['changeId']) {
+    foreach ($_SESSION['shopping_cart'] as &$item) {
+        if ($item['itemId'] == $_POST['changeId']) {
             $item['itemQuantity'] = $_POST['changeQuantity'];
             unset($item);
             break;

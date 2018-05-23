@@ -1,12 +1,12 @@
 <?php  
 session_start();
-if (count($_SESSION['shoppingCart']) >= 1) {
-	for ($i=0; $i < count($_SESSION['shoppingCart']); $i++) { 
-		if ($_POST['deleteItemId'] == $_SESSION['shoppingCart'][$i]['itemId']) {
-			unset($_SESSION['shoppingCart'][$i]);
-			$_SESSION['shoppingCart'] = array_values($_SESSION['shoppingCart']);
-			if (count($_SESSION['shoppingCart']) == 0) {
-				unset($_SESSION['shoppingCart']);
+if (count($_SESSION['shopping_cart']) >= 1) {
+	for ($i=0; $i < count($_SESSION['shopping_cart']); $i++) {
+		if ($_POST['deleteItemId'] == $_SESSION['shopping_cart'][$i]['itemId']) {
+			unset($_SESSION['shopping_cart'][$i]);
+			$_SESSION['shopping_cart'] = array_values($_SESSION['shopping_cart']);
+			if (count($_SESSION['shopping_cart']) == 0) {
+				unset($_SESSION['shopping_cart']);
 				session_destroy();
 			}
 			break;
@@ -14,7 +14,7 @@ if (count($_SESSION['shoppingCart']) >= 1) {
 	}
 }
 else {
-	unset($_SESSION['shoppingCart']);
+	unset($_SESSION['shopping_cart']);
 	session_destroy();
 }
 

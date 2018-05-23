@@ -87,10 +87,10 @@
                 </li>
                 <li class="nav-item ">
                     <?php
-                    if (isset($_SESSION['sessionUsername'])) {
+                    if (isset($_SESSION['session_username'])) {
                         ?>
                         <div class="dropdown show">
-                            <a class="nav-link dropdown-toggle trans-med" href="#" id="dropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> <?= $_SESSION['sessionUsername']  ?></a>
+                            <a class="nav-link dropdown-toggle trans-med" href="#" id="dropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> <?= $_SESSION['session_username']  ?></a>
                             <div class="dropdown-menu" aria-labelledby="dropdownProfile">
                                 <a class="dropdown-item" href="./profile.php">Profile</a>
                                 <a class="dropdown-item" href="./controllers/logout.php?clear=y">Log out</a>
